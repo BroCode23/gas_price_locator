@@ -26,6 +26,7 @@ import CardContent from '@mui/material/CardContent';
 import GasData from './GasData';
 import GasImg from './gas_map.png';
 import Grid from '@mui/material/Grid';
+import { Link } from "react-router-dom";
 
 const drawerWidth = 200;
 
@@ -108,7 +109,6 @@ export default function MiniDrawer() {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <head><meta name="viewport" content="initial-scale=1, width=device-width" /></head>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -137,8 +137,8 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Gas Prices', 'Submit a Price', 'Contact Us', 'Report'].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          <Link to="/" >
+            <ListItem key="Gas Prices" disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -153,15 +153,78 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index === 0 ? <LocalGasStationIcon /> : null}
-                  {index === 1 ? <BorderColorIcon /> : null}
-                  {index === 2 ? <MailIcon /> : null}
-                  {index === 3 ? <ReportIcon /> : null}
+                  <LocalGasStationIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary="Gas Prices" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-          ))}
+          </Link>
+          <Link to="/gas-form" >
+            <ListItem key='Submit a Price' disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <BorderColorIcon />
+                </ListItemIcon>
+                <ListItemText primary='Submit a Price' sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Link to="/contact" >
+            <ListItem key='Contact Us' disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary='Contact Us' sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Link to="/report" >
+            <ListItem key='Report' disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <ReportIcon />
+                </ListItemIcon>
+                <ListItemText primary='Report' sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, bgcolor: '#E7EBF0', p: 3 }}>
