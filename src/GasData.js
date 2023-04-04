@@ -61,11 +61,11 @@ export default function GasData() {
             </Typography>
             <Table size="small">
                 <TableHead>
-                    <TableRow>
-                        <TableCell>Date Submitted</TableCell>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Address</TableCell>
-                        <TableCell align="right">Price Per Gallon</TableCell>
+                    <TableRow >
+                        <TableCell sx={{ "font-weight": "bold" }} >Date Submitted</TableCell>
+                        <TableCell sx={{ "font-weight": "bold" }}>Name</TableCell>
+                        <TableCell sx={{ "font-weight": "bold" }}>Address</TableCell>
+                        <TableCell sx={{ "font-weight": "bold" }} align="right">Price Per Gallon</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

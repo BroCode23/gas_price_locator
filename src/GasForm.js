@@ -27,7 +27,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
 
@@ -102,10 +102,9 @@ const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-        firstname: data.get('firstName'),
-        lastname: data.get('lastName'),
-        email: data.get('email'),
-        password: data.get('password')
+        price: data.get('ppg'),
+        name: data.get('name'),
+        address: data.get('address')
     });
 };
 
@@ -151,7 +150,7 @@ export default function GasForm() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    <Link to="/" >
+                    <Link to="/" style={{ "text-decoration": "initial", color: "black" }}>
                         <ListItem key="Gas Prices" disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -169,11 +168,11 @@ export default function GasForm() {
                                 >
                                     <LocalGasStationIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Gas Prices" sx={{ opacity: open ? 1 : 0 }} />
+                                <ListItemText primary="Gas Prices" variant="button" sx={{ opacity: open ? 1 : 0 }} />
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to="/gas-form" >
+                    <Link to="/gas-form" style={{ "text-decoration": "initial", color: "black" }}>
                         <ListItem key='Submit a Price' disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -195,7 +194,7 @@ export default function GasForm() {
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to="/contact" >
+                    <Link to="/contact" style={{ "text-decoration": "initial", color: "black" }}>
                         <ListItem key='Contact Us' disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -217,7 +216,7 @@ export default function GasForm() {
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to="/report" >
+                    <Link to="/report" style={{ "text-decoration": "initial", color: "black" }} >
                         <ListItem key='Report' disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -256,53 +255,40 @@ export default function GasForm() {
                             }}
                         >
                             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                                <LockOutlinedIcon />
+                                <BorderColorOutlinedIcon />
                             </Avatar>
-                            <Typography component="h1" variant="h5">
-                                Sign up
-                            </Typography>
+                            <Typography component="h1" variant="h5">Submit a Price</Typography>
                             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} sm={6}>
                                         <TextField
-                                            autoComplete="given-name"
-                                            name="firstName"
+                                            autoComplete="price"
+                                            name="ppg"
                                             required
                                             fullWidth
-                                            id="firstName"
-                                            label="First Name"
+                                            id="ppg"
+                                            label="Price Per Gallon"
                                             autoFocus
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="lastName"
-                                            label="Last Name"
-                                            name="lastName"
-                                            autoComplete="family-name"
-                                        />
-                                    </Grid>
                                     <Grid item xs={12}>
                                         <TextField
                                             required
                                             fullWidth
-                                            id="email"
-                                            label="Email Address"
-                                            name="email"
-                                            autoComplete="email"
+                                            id="name"
+                                            label="Gas Station Name"
+                                            name="name"
+                                            autoComplete="name"
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} sm={12}>
                                         <TextField
                                             required
                                             fullWidth
-                                            name="password"
-                                            label="Password"
-                                            type="password"
-                                            id="password"
-                                            autoComplete="new-password"
+                                            id="address"
+                                            label="Street Address"
+                                            name="address"
+                                            autoComplete="address"
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -317,21 +303,12 @@ export default function GasForm() {
                                     fullWidth
                                     variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
-                                >
-                                    Sign Up
-                                </Button>
-                                <Grid container justifyContent="flex-end">
-                                    <Grid item>
-                                        <Link href="#" variant="body2">
-                                            Already have an account? Sign in
-                                        </Link>
-                                    </Grid>
-                                </Grid>
+                                >Submit Price</Button>
                             </Box>
                         </Box>
                     </CardContent>
                 </Card>
             </Box>
-        </Box>
+        </Box >
     );
 }

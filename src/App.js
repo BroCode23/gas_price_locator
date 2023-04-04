@@ -137,7 +137,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          <Link to="/" >
+          <Link to="/" style={{ "text-decoration": "initial", color: "black" }}>
             <ListItem key="Gas Prices" disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -159,7 +159,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/gas-form" >
+          <Link to="/gas-form" style={{ "text-decoration": "initial", color: "black" }}>
             <ListItem key='Submit a Price' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -181,7 +181,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/contact" >
+          <Link to="/contact" style={{ "text-decoration": "initial", color: "black" }}>
             <ListItem key='Contact Us' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -203,7 +203,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/report" >
+          <Link to="/report" style={{ "text-decoration": "initial", color: "black" }}>
             <ListItem key='Report' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
