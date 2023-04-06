@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
+import TestRenderer from 'react-test-renderer';
 import App from './App';
+import GasForm from './GasForm'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
-test('renders Gas Prices title', () => {
-  render(<App />);
-  const titleText = screen.getByText(/Gas Prices/i);
-  expect(titleText).toBeInTheDocument();
+test('Snapshot Testing', () => {
+  const tree = TestRenderer
+    .create(<Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="gas-form" element={<GasForm />} />
+      </Routes>
+    </Router>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });
