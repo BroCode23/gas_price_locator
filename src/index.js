@@ -8,6 +8,8 @@ import {
 import { Provider } from 'react-redux'
 import store from './store'
 import GasForm from './GasForm'
+import ContactUs from './ContactUs'
+import Report from './Report'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -18,6 +20,8 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="gas-form" element={<GasForm />} />
+          <Route path="contact" element={<ContactUs />} />
+          <Route path="report" element={<Report />} />
         </Routes>
       </Router>
     </Provider>

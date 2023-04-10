@@ -102,7 +102,7 @@ exports[`Snapshot Testing 1`] = `
           style={
             Object {
               "color": "black",
-              "text-decoration": "initial",
+              "textDecoration": "initial",
             }
           }
         >
@@ -160,7 +160,7 @@ exports[`Snapshot Testing 1`] = `
           style={
             Object {
               "color": "black",
-              "text-decoration": "initial",
+              "textDecoration": "initial",
             }
           }
         >
@@ -218,7 +218,7 @@ exports[`Snapshot Testing 1`] = `
           style={
             Object {
               "color": "black",
-              "text-decoration": "initial",
+              "textDecoration": "initial",
             }
           }
         >
@@ -276,7 +276,7 @@ exports[`Snapshot Testing 1`] = `
           style={
             Object {
               "color": "black",
-              "text-decoration": "initial",
+              "textDecoration": "initial",
             }
           }
         >
@@ -332,7 +332,7 @@ exports[`Snapshot Testing 1`] = `
     </div>
   </div>
   <main
-    className="MuiBox-root css-okq6qy"
+    className="MuiBox-root css-qr2fxg"
   >
     <div
       className="css-1r9jet7"
@@ -374,23 +374,19 @@ exports[`Snapshot Testing 1`] = `
             <h3
               className="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
             >
-              $2.75
+              $
+              2.75
             </h3>
             <div
               className="MuiTypography-root MuiTypography-body css-37jdci-MuiTypography-root"
             >
               Exxon
             </div>
-            <p
-              className="MuiTypography-root MuiTypography-body2 css-gmb5b2-MuiTypography-root"
+            <div
+              className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
             >
-              -$0.05
-            </p>
-            <p
-              className="MuiTypography-root MuiTypography-body1 css-1kuyd6t-MuiTypography-root"
-            >
-               vs. last week
-            </p>
+              11302 Space Center Blvd
+            </div>
           </div>
         </div>
       </div>
@@ -601,16 +597,6 @@ exports[`Snapshot Testing 1`] = `
                 </tr>
               </tbody>
             </table>
-            <br />
-            <a
-              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1te5fhy-MuiTypography-root-MuiLink-root"
-              href="#"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-            >
-              See more orders
-            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { useDispatch } from 'react-redux'
-import { addDatapoint } from './Database'
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -25,15 +23,7 @@ import ReportIcon from '@mui/icons-material/Report';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
-import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
 
 const drawerWidth = 200;
 
@@ -102,10 +92,9 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function GasForm() {
+export default function ContactUs() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [showAlert, setShowAlert] = React.useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -113,24 +102,6 @@ export default function GasForm() {
 
     const handleDrawerClose = () => {
         setOpen(false);
-    };
-
-    const dispatch = useDispatch();
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const months = { 0: "Jan", 1: "Feb", 2: "Mar", 3: "Apr", 4: "May", 5: "Jun", 6: "Jul", 7: "Aug", 8: "Sep", 9: "Oct", 10: "Nov", 11: "Dec" };
-        const data = new FormData(event.currentTarget);
-        let dataObj = {}
-        for (const pair of data.entries()) {
-            dataObj[pair[0]] = pair[1];
-        }
-        const date = new Date();
-        let currentDate = `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
-        dataObj['date'] = currentDate;
-        console.log(dataObj);
-        dispatch(addDatapoint(dataObj));
-        setShowAlert(true);
     };
 
     return (
@@ -257,11 +228,10 @@ export default function GasForm() {
                 flexGrow: 1, left: "64px", right: "0px", position: "fixed", height: "100%", overflowY: "auto", bgcolor: '#E7EBF0', p: 3
             }}>
                 <DrawerHeader />
-                <Card sx={{ margin: "auto", width: "fit-content" }}>
+                <Card sx={{ width: "fit-content", margin: "auto" }}>
                     <CardContent>
                         <Box
                             sx={{
-
                                 marginTop: 8,
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -269,57 +239,15 @@ export default function GasForm() {
                             }}
                         >
                             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                                <BorderColorOutlinedIcon />
+                                <ReportIcon />
                             </Avatar>
-                            <Typography component="h1" variant="h5">Submit a Price</Typography>
-                            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete="price"
-                                            name="ppg"
-                                            required
-                                            fullWidth
-                                            id="ppg"
-                                            label="Price Per Gallon"
-                                            autoFocus
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="name"
-                                            label="Gas Station Name"
-                                            name="name"
-                                            autoComplete="name"
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12} sm={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="address"
-                                            label="Street Address"
-                                            name="address"
-                                            autoComplete="address"
-                                        />
-                                    </Grid>
-                                </Grid>
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}
-                                >Submit Price</Button>
-                            </Box>
+                            <Typography component="h1" variant="h5">Contact Us at any of the Following</Typography>
+                            <Typography variant="body" component="div">Phone: 123-456-7890</Typography>
+                            <Typography variant="body" component="div">Mail: 12345 Corporate Hwy</Typography>
+                            <Typography variant="body" component="div">Email: mailto@corporate.com</Typography>
                         </Box>
                     </CardContent>
                 </Card>
-                {showAlert ? <Alert sx={{ position: "absolute", bottom: "25px", right: "25px" }} severity="success" variant="filled" onClose={() => { setShowAlert(false) }}>
-                    <AlertTitle>Success</AlertTitle>
-                    Price submitted to the database
-                </Alert> : null}
             </Box>
         </Box >
     );

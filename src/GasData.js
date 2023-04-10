@@ -1,16 +1,11 @@
 import * as React from 'react';
 import { useSelector } from 'react-redux'
-import Link from '@mui/material/Link';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
-
-function preventDefault(event) {
-    event.preventDefault();
-}
 
 export default function GasData() {
     const rows = useSelector((state) => state.database.rows);
@@ -40,10 +35,6 @@ export default function GasData() {
                     ))}
                 </TableBody>
             </Table>
-            <br />
-            <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-                See more orders
-            </Link>
         </React.Fragment>
     );
 }

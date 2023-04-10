@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useSelector } from 'react-redux'
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -106,6 +107,16 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
+  const rows = useSelector((state) => state.database.rows);
+  let index = 0;
+  let minPrice = rows[0].ppg;
+  for (let i in rows) {
+    if (parseFloat(rows[i].ppg) < minPrice) {
+      minPrice = rows[i].ppg;
+      index = i;
+    }
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -136,7 +147,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          <Link to="/" style={{ "text-decoration": "initial", color: "black" }}>
+          <Link to="/" style={{ textDecoration: "initial", color: "black" }}>
             <ListItem key="Gas Prices" disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -158,7 +169,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/gas-form" style={{ "text-decoration": "initial", color: "black" }}>
+          <Link to="/gas-form" style={{ textDecoration: "initial", color: "black" }}>
             <ListItem key='Submit a Price' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -180,7 +191,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/contact" style={{ "text-decoration": "initial", color: "black" }}>
+          <Link to="/contact" style={{ textDecoration: "initial", color: "black" }}>
             <ListItem key='Contact Us' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -202,7 +213,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="/report" style={{ "text-decoration": "initial", color: "black" }}>
+          <Link to="/report" style={{ textDecoration: "initial", color: "black" }}>
             <ListItem key='Report' disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -226,7 +237,7 @@ export default function MiniDrawer() {
           </Link>
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, bgcolor: '#E7EBF0', p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, left: "64px", right: "0px", position: "fixed", height: "100%", overflowY: "auto", bgcolor: '#E7EBF0', p: 3 }}>
         <DrawerHeader />
         <Grid container spacing={2}>
           <Grid item xs='auto'>
@@ -240,10 +251,9 @@ export default function MiniDrawer() {
             <Card sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography variant="h6" component="div">Cheapest Gas in Area</Typography>
-                <Typography variant="h3">$2.75</Typography>
-                <Typography variant="body" component="div">Exxon</Typography>
-                <Typography variant="body2" sx={{ color: "#009688", display: 'inline' }}>-$0.05</Typography>
-                <Typography sx={{ color: 'text.secondary', display: 'inline', fontSize: 14 }}> vs. last week</Typography>
+                <Typography variant="h3">${parseFloat(rows[index].ppg).toFixed(2)}</Typography>
+                <Typography variant="body" component="div">{rows[index].name}</Typography>
+                <Typography variant="body2" component="div">{rows[index].address}</Typography>
               </CardContent>
             </Card>
           </Grid>
