@@ -5,19 +5,22 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-// import './index.css';
+import { Provider } from 'react-redux'
+import store from './store'
 import GasForm from './GasForm'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="gas-form" element={<GasForm />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="gas-form" element={<GasForm />} />
+        </Routes>
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

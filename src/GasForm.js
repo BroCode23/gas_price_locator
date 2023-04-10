@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useDispatch } from 'react-redux'
+import { addDatapoint } from './Database'
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -98,16 +100,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-        price: data.get('ppg'),
-        name: data.get('name'),
-        address: data.get('address')
-    });
-};
-
 export default function GasForm() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -118,6 +110,23 @@ export default function GasForm() {
 
     const handleDrawerClose = () => {
         setOpen(false);
+    };
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const months = { 0: "Jan", 1: "Feb", 2: "Mar", 3: "Apr", 4: "May", 5: "Jun", 6: "Jul", 7: "Aug", 8: "Sep", 9: "Oct", 10: "Nov", 11: "Dec" };
+        const data = new FormData(event.currentTarget);
+        let dataObj = {}
+        for (const pair of data.entries()) {
+            dataObj[pair[0]] = pair[1];
+        }
+        const date = new Date();
+        let currentDate = `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+        dataObj['date'] = currentDate;
+        console.log(dataObj);
+        dispatch(addDatapoint(dataObj));
     };
 
     return (
