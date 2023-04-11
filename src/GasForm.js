@@ -27,8 +27,6 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
@@ -36,6 +34,9 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
 const drawerWidth = 200;
+
+const ERROR_NOTIF = "ERROR_NOTIF";
+const SUCCESS_NOTIF = "SUCCESS_NOTIF";
 
 const openedMixin = (theme) => ({
     width: drawerWidth,
@@ -104,8 +105,9 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function GasForm() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
-    const [showAlert, setShowAlert] = React.useState(false);
+    const [open, setOpen] = React.useState(false); // state for the menu drawer
+    const [showAlert, setShowAlert] = React.useState(""); // state for the success notification
+    const [ppgError, setPpgError] = React.useState({ error: false, helperText: "" }); // state for the ppg input processing
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -119,6 +121,10 @@ export default function GasForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (ppgError.error) {
+            setShowAlert(ERROR_NOTIF);
+            return;
+        }
         const months = { 0: "Jan", 1: "Feb", 2: "Mar", 3: "Apr", 4: "May", 5: "Jun", 6: "Jul", 7: "Aug", 8: "Sep", 9: "Oct", 10: "Nov", 11: "Dec" };
         const data = new FormData(event.currentTarget);
         let dataObj = {}
@@ -130,7 +136,7 @@ export default function GasForm() {
         dataObj['date'] = currentDate;
         console.log(dataObj);
         dispatch(addDatapoint(dataObj));
-        setShowAlert(true);
+        setShowAlert(SUCCESS_NOTIF);
     };
 
     return (
@@ -276,6 +282,8 @@ export default function GasForm() {
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} sm={6}>
                                         <TextField
+                                            error={ppgError.error}
+                                            helperText={ppgError.helperText}
                                             autoComplete="price"
                                             name="ppg"
                                             required
@@ -283,6 +291,12 @@ export default function GasForm() {
                                             id="ppg"
                                             label="Price Per Gallon"
                                             autoFocus
+                                            onChange={(event) => {
+                                                if (isNaN(event.target.value))
+                                                    setPpgError({ error: true, helperText: "Entry must be a number." });
+                                                else
+                                                    setPpgError({ error: false, helperText: "" });
+                                            }}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -316,9 +330,13 @@ export default function GasForm() {
                         </Box>
                     </CardContent>
                 </Card>
-                {showAlert ? <Alert sx={{ position: "absolute", bottom: "25px", right: "25px" }} severity="success" variant="filled" onClose={() => { setShowAlert(false) }}>
+                {showAlert === "SUCCESS_NOTIF" ? <Alert sx={{ position: "absolute", bottom: "25px", right: "25px" }} severity="success" variant="filled" onClose={() => { setShowAlert("") }}>
                     <AlertTitle>Success</AlertTitle>
                     Price submitted to the database
+                </Alert> : null}
+                {showAlert === "ERROR_NOTIF" ? <Alert sx={{ position: "absolute", bottom: "25px", right: "25px" }} severity="error" variant="filled" onClose={() => { setShowAlert("") }}>
+                    <AlertTitle>Error</AlertTitle>
+                    Fix the form before submitting
                 </Alert> : null}
             </Box>
         </Box >
