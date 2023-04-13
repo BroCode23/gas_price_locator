@@ -5,20 +5,19 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Provider } from 'react-redux'
-import store from './store'
-import GasForm from './GasForm'
-import ContactUs from './ContactUs'
-import Report from './Report'
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './util/store';
+import GasForm from './pages/GasForm';
+import ContactUs from './pages/ContactUs';
+import Report from './pages/Report';
+import Homepage from './pages/Homepage';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="gas-form" element={<GasForm />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="report" element={<Report />} />
@@ -28,8 +27,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

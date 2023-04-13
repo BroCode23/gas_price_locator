@@ -1,24 +1,25 @@
-import TestRenderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import { Provider } from 'react-redux'
-import store from './store'
-import GasForm from './GasForm'
-import ContactUs from './ContactUs'
-import Report from './Report'
-import App from './App';
+import { Provider } from 'react-redux';
 
-test('Snapshot Testing', () => {
-  const tree = TestRenderer
+import store from '../util/store';
+import GasForm from '../pages/GasForm';
+import ContactUs from '../pages/ContactUs';
+import Report from '../pages/Report';
+import Homepage from '../pages/Homepage';
+
+it('renders correctly', () => {
+  const tree = renderer
     .create(<React.StrictMode>
       <Provider store={store}>
         <Router>
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route path="/" element={<Homepage />} />
             <Route path="gas-form" element={<GasForm />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="report" element={<Report />} />

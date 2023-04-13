@@ -1,14 +1,13 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -20,10 +19,6 @@ import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import MailIcon from '@mui/icons-material/Mail';
 import ReportIcon from '@mui/icons-material/Report';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
-import { Link } from "react-router-dom";
 
 const drawerWidth = 200;
 
@@ -48,7 +43,7 @@ const closedMixin = (theme) => ({
     },
 });
 
-const DrawerHeader = styled('div')(({ theme }) => ({
+export const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -92,7 +87,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function ContactUs() {
+export default function AppToolbar() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -105,8 +100,7 @@ export default function ContactUs() {
     };
 
     return (
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
+        <React.Fragment>
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -152,7 +146,7 @@ export default function ContactUs() {
                                 >
                                     <LocalGasStationIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Gas Prices" variant="button" sx={{ opacity: open ? 1 : 0 }} />
+                                <ListItemText primary="Gas Prices" sx={{ opacity: open ? 1 : 0 }} />
                             </ListItemButton>
                         </ListItem>
                     </Link>
@@ -200,7 +194,7 @@ export default function ContactUs() {
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to="/report" style={{ textDecoration: "initial", color: "black" }} >
+                    <Link to="/report" style={{ textDecoration: "initial", color: "black" }}>
                         <ListItem key='Report' disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -224,31 +218,6 @@ export default function ContactUs() {
                     </Link>
                 </List>
             </Drawer>
-            <Box component="main" sx={{
-                flexGrow: 1, left: "64px", right: "0px", position: "fixed", height: "100%", overflowY: "auto", bgcolor: '#E7EBF0', p: 3
-            }}>
-                <DrawerHeader />
-                <Card sx={{ width: "fit-content", margin: "auto" }}>
-                    <CardContent>
-                        <Box
-                            sx={{
-                                marginTop: 8,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                                <ReportIcon />
-                            </Avatar>
-                            <Typography component="h1" variant="h5">Contact Us at any of the Following</Typography>
-                            <Typography variant="body" component="div">Phone: 123-456-7890</Typography>
-                            <Typography variant="body" component="div">Mail: 12345 Corporate Hwy</Typography>
-                            <Typography variant="body" component="div">Email: mailto@corporate.com</Typography>
-                        </Box>
-                    </CardContent>
-                </Card>
-            </Box>
-        </Box >
+        </React.Fragment>
     );
 }
