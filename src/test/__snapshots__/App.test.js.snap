@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="MuiBox-root css-k008qs"
 >
   <header
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-19z1ozs-MuiPaper-root-MuiAppBar-root"
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1ir82sk-MuiPaper-root-MuiAppBar-root"
   >
     <div
       className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
@@ -107,11 +107,11 @@ exports[`renders correctly 1`] = `
           }
         >
           <li
-            className="MuiListItem-root MuiListItem-gutters css-uxa1ks-MuiListItem-root"
+            className="MuiListItem-root MuiListItem-gutters css-1m6a59q-MuiListItem-root"
             disabled={false}
           >
             <div
-              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root"
+              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-izz8us-MuiButtonBase-root-MuiListItemButton-root"
               onBlur={[Function]}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
@@ -165,11 +165,11 @@ exports[`renders correctly 1`] = `
           }
         >
           <li
-            className="MuiListItem-root MuiListItem-gutters css-uxa1ks-MuiListItem-root"
+            className="MuiListItem-root MuiListItem-gutters css-1m6a59q-MuiListItem-root"
             disabled={false}
           >
             <div
-              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root"
+              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-izz8us-MuiButtonBase-root-MuiListItemButton-root"
               onBlur={[Function]}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
@@ -223,11 +223,11 @@ exports[`renders correctly 1`] = `
           }
         >
           <li
-            className="MuiListItem-root MuiListItem-gutters css-uxa1ks-MuiListItem-root"
+            className="MuiListItem-root MuiListItem-gutters css-1m6a59q-MuiListItem-root"
             disabled={false}
           >
             <div
-              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root"
+              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-izz8us-MuiButtonBase-root-MuiListItemButton-root"
               onBlur={[Function]}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
@@ -281,11 +281,11 @@ exports[`renders correctly 1`] = `
           }
         >
           <li
-            className="MuiListItem-root MuiListItem-gutters css-uxa1ks-MuiListItem-root"
+            className="MuiListItem-root MuiListItem-gutters css-1m6a59q-MuiListItem-root"
             disabled={false}
           >
             <div
-              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root"
+              className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-izz8us-MuiButtonBase-root-MuiListItemButton-root"
               onBlur={[Function]}
               onContextMenu={[Function]}
               onDragLeave={[Function]}
@@ -332,271 +332,275 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <main
-    className="MuiBox-root css-qr2fxg"
+    className="MuiBox-root css-fxbtpg"
   >
     <div
-      className="css-1r9jet7"
-    />
-    <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+      className="MuiContainer-root MuiContainer-maxWidthLg css-1f2kw6w-MuiContainer-root"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-      >
-        <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
-        >
-          <div
-            className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-          >
-            <img
-              alt="Local Gas Stations"
-              border="3px solid #000"
-              src="gas_map.png"
-            />
-          </div>
-        </div>
-      </div>
+        className="css-1r9jet7"
+      />
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
         >
           <div
-            className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
           >
             <div
-              className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              Cheapest Gas in Area
-            </div>
-            <h3
-              className="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
-            >
-              $
-              2.75
-            </h3>
-            <div
-              className="MuiTypography-root MuiTypography-body css-37jdci-MuiTypography-root"
-            >
-              Exxon
-            </div>
-            <div
-              className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-            >
-              11302 Space Center Blvd
+              <img
+                alt="Local Gas Stations"
+                border="3px solid #000"
+                src="gas_map.png"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      >
         <div
-          className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
         >
           <div
-            className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
           >
-            <h2
-              className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-gi7hi0-MuiTypography-root"
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              Local Gas Prices
-            </h2>
-            <table
-              className="MuiTable-root css-rqglhn-MuiTable-root"
-              role={null}
+              <div
+                className="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+              >
+                Cheapest Gas in Area
+              </div>
+              <h3
+                className="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
+              >
+                $
+                2.75
+              </h3>
+              <div
+                className="MuiTypography-root MuiTypography-body css-37jdci-MuiTypography-root"
+              >
+                Exxon
+              </div>
+              <div
+                className="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+              >
+                11302 Space Center Blvd
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-pwngrv-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <thead
-                className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+              <h2
+                className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1990nlz-MuiTypography-root"
+              >
+                Local Gas Prices
+              </h2>
+              <table
+                className="MuiTable-root css-rqglhn-MuiTable-root"
                 role={null}
               >
-                <tr
-                  className="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+                <thead
+                  className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
                   role={null}
                 >
-                  <th
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
-                    scope="col"
+                  <tr
+                    className="MuiTableRow-root MuiTableRow-head css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    Date Submitted
-                  </th>
-                  <th
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
-                    scope="col"
-                  >
-                    Name
-                  </th>
-                  <th
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
-                    scope="col"
-                  >
-                    Address
-                  </th>
-                  <th
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeSmall css-1gjur2s-MuiTableCell-root"
-                    scope="col"
-                  >
-                    Price Per Gallon
-                  </th>
-                </tr>
-              </thead>
-              <tbody
-                className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
-                role={null}
-              >
-                <tr
-                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                    <th
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
+                      scope="col"
+                    >
+                      Date Submitted
+                    </th>
+                    <th
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
+                      scope="col"
+                    >
+                      Name
+                    </th>
+                    <th
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1181pq8-MuiTableCell-root"
+                      scope="col"
+                    >
+                      Address
+                    </th>
+                    <th
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeSmall css-1gjur2s-MuiTableCell-root"
+                      scope="col"
+                    >
+                      Price Per Gallon
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
                   role={null}
                 >
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  <tr
+                    className="MuiTableRow-root css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    16 Mar, 2019
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      16 Mar, 2019
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      HEB Fuel
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      3501 Clear Lake City Blvd
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    >
+                      $2.96
+                    </td>
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    HEB Fuel
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      16 Mar, 2019
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      Motu 2395 Chevron
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      2395 Clear Lake City Blvd
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    >
+                      $3.30
+                    </td>
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    3501 Clear Lake City Blvd
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      16 Mar, 2019
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      Chevron
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      3407 Genoa Red Bluff Rd
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    >
+                      $3.30
+                    </td>
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    $2.96
-                  </td>
-                </tr>
-                <tr
-                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-                  role={null}
-                >
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      16 Mar, 2019
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      Pitstop Express #11
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      11302 Space Center Blvd
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    >
+                      $2.97
+                    </td>
+                  </tr>
+                  <tr
+                    className="MuiTableRow-root css-dvunen-MuiTableRow-root"
+                    role={null}
                   >
-                    16 Mar, 2019
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    Motu 2395 Chevron
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    2395 Clear Lake City Blvd
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
-                  >
-                    $3.30
-                  </td>
-                </tr>
-                <tr
-                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-                  role={null}
-                >
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    16 Mar, 2019
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    Chevron
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    3407 Genoa Red Bluff Rd
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
-                  >
-                    $3.30
-                  </td>
-                </tr>
-                <tr
-                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-                  role={null}
-                >
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    16 Mar, 2019
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    Pitstop Express #11
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    11302 Space Center Blvd
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
-                  >
-                    $2.97
-                  </td>
-                </tr>
-                <tr
-                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-                  role={null}
-                >
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    15 Mar, 2019
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    Exxon
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
-                  >
-                    11302 Space Center Blvd
-                  </td>
-                  <td
-                    aria-sort={null}
-                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
-                  >
-                    $2.75
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      15 Mar, 2019
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      Exxon
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                    >
+                      11302 Space Center Blvd
+                    </td>
+                    <td
+                      aria-sort={null}
+                      className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+                    >
+                      $2.75
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

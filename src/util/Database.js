@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const rows = [
+export const rows = [
     {
         id: 0,
         date: '16 Mar, 2019',
@@ -40,7 +40,7 @@ const rows = [
 
 export const database = createSlice({
     name: 'database',
-    initialState: { rows: rows, currentId: 5 },
+    initialState: { rows: rows, currentId: rows.length },
     reducers: {
         addDatapoint: (state, obj) => {
             return {
