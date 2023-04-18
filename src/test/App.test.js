@@ -1,21 +1,33 @@
-import renderer from 'react-test-renderer';
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-import { Provider } from 'react-redux';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { green, brown } from '@mui/material/colors';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { green, brown } from "@mui/material/colors";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+import pretty from "pretty";
 
-import store from '../util/store';
-import GasForm from '../pages/GasForm';
-import ContactUs from '../pages/ContactUs';
-import Report from '../pages/Report';
-import Homepage from '../pages/Homepage';
+import store from "../util/store";
+import GasForm from "../pages/GasForm";
+import ContactUs from "../pages/ContactUs";
+import Report from "../pages/Report";
+import Homepage from "../pages/Homepage";
 
-test('Renders the App correctly', () => {
+let container = null;
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // cleanup on exiting
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+test("Renders the App correctly", () => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -23,12 +35,12 @@ test('Renders the App correctly', () => {
       },
       secondary: {
         main: brown[400],
-      }
+      },
     },
   });
 
-  const tree = renderer
-    .create(<React.StrictMode>
+  act(() => {
+    render(
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <Router>
@@ -40,8 +52,10 @@ test('Renders the App correctly', () => {
             </Routes>
           </Router>
         </Provider>
-      </ThemeProvider>
-    </React.StrictMode>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+      </ThemeProvider>,
+      container
+    );
+  });
+
+  expect(pretty(container.innerHTML)).toMatchSnapshot();
 });

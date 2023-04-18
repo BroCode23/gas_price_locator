@@ -1,4 +1,5 @@
 import reducer, { addDatapoint, rows } from '../util/Database'
+import "react-dom/test-utils";
 
 test('should return the initial state', () => {
     expect(reducer(undefined, { type: undefined })).toEqual(
