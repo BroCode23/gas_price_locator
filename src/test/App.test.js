@@ -15,7 +15,7 @@ import ContactUs from '../pages/ContactUs';
 import Report from '../pages/Report';
 import Homepage from '../pages/Homepage';
 
-it('renders correctly', () => {
+test('Renders the App correctly', () => {
   const theme = createTheme({
     palette: {
       primary: {

@@ -4,7 +4,7 @@ test('should return the initial state', () => {
     expect(reducer(undefined, { type: undefined })).toEqual(
         { rows: rows, currentId: 5 }
     )
-})
+});
 
 test('should handle a datapoint being added to an empty list', () => {
     const previousState = { rows: [], currentId: 0 };
@@ -24,7 +24,7 @@ test('should handle a datapoint being added to an empty list', () => {
         }],
         currentId: 1
     });
-})
+});
 
 test('should handle a datapoint being added to an existing list', () => {
     const previousState = { rows: rows, currentId: rows.length }
@@ -45,4 +45,4 @@ test('should handle a datapoint being added to an existing list', () => {
         }],
         currentId: rows.length + 1
     });
-})
+});
